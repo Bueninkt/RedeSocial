@@ -1,0 +1,359 @@
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+/* Header */
+.header {
+    background-color: #032c2c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+}
+
+.header-content {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffffd7;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-icon {
+    color: #8fe0cc;
+    transition: color 0.2s;
+}
+
+.nav-icon:hover {
+    color: #6cffa9;
+}
+
+.profile-icon {
+    position: relative;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.profile-icon::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #822DA3;
+    transition: width 0.2s;
+}
+
+.profile-icon:hover::after {
+    width: 100%;
+}
+
+/* Layout principal */
+.min-h-screen {
+    min-height: 100vh;
+    padding-top: 1rem;
+}
+
+.container {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Criar post */
+.create-post {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.create-post-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #151116;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.user-avatar img {
+    width: 31px;
+    height: 31px;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+/* Campos extras sob o header */
+.extra-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.extra-fields input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+/* Ações de post */
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.media-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: default;
+    opacity: 0.5;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.publish-btn {
+    background-color: #822DA3;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.publish-btn:hover {
+    background-color: #692585;
+}
+
+/* Posts */
+.post {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #d1d5db;
+    border-radius: 9999px;
+    margin-right: 0.75rem;
+}
+
+.post-author {
+    font-weight: 600;
+    color: #111827;
+}
+
+.post-time {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.post-image {
+    width: 100%;
+    height: 16rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    /* força deformação uniforme */
+}
+
+.post-content {
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.interaction-buttons {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.interaction-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.interaction-btn:hover {
+    color: #ef4444;
+}
+
+/* Botão Deletar */
+.delete-btn { color:#ef4444; }
+
+.delete-btn:hover { color:#b91c1c; }
+
+
+/* Comentários inline */
+.comments {
+    display: none;
+    margin-top: 1rem;
+}
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.comment {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.comment-avatar {
+    width: 2rem;
+    height: 2rem;
+    background-color: #d1d5db;
+    border-radius: 9999px;
+    flex-shrink: 0;
+}
+
+.comment-content {
+    background-color: #f3f4f6;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    flex-grow: 1;
+}
+
+.comment-author {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #111827;
+}
+
+.comment-text {
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.add-comment {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.comment-input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+}
+
+.comment-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.send-comment {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.send-comment:hover {
+    color: #2563eb;
+}
+  
+
+  .user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #151116;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  
+  .user-avatar img {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  

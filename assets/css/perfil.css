@@ -1,0 +1,173 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #171225;
+  color: #f8f8f8;
+}
+
+/* Navbar */
+.header {
+  background-color: #032c2c;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+}
+
+.header-content {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ffffffd7;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-icon {
+  color: #8fe0cc;
+  transition: color 0.2s;
+}
+
+.nav-icon:hover {
+  color: #6cffa9;
+}
+
+.profile-icon {
+  position: relative;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+.profile-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #822DA3;
+  transition: width 0.2s;
+}
+
+.profile-icon:hover::after {
+  width: 100%;
+}
+
+/* Perfil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  background: #50429e15;
+  max-width: 935px;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+
+.profile-image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-right: 32px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #dbdbdb;
+}
+
+.profile-image input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-username-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.profile-username-row h1 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.edit-btn, .reset-btn {
+  border: 1px solid #313131;
+  background: #818181;
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.edit-btn:hover, .reset-btn:hover {
+  background: #fafafa;
+}
+
+.stats-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.stats-list li span {
+  font-weight: 600;
+}
+
+.profile-bio {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.profile-bio span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.profile-header.editing .editable {
+  outline: 1px dashed #999;
+  padding: 2px 4px;
+  background: #fff;
+  color: #262626;
+}

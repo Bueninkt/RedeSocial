@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil – ClubeFy</title>
+  <link rel="stylesheet" href="../assets/css/perfil.css"/>
+</head>
+<body>
+  <!-- Navbar padrão da Home -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">Clubefy</h1>
+      <nav class="nav-icons">
+        <a href="../pages/home.html" class="nav-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </a>
+        <a href="../pages/perfil.html" class="nav-icon profile-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="profile-header">
+    <div class="profile-image">
+      <img id="profilePic" src="../assets/img/avatar.png" alt="Avatar"/>
+      <input type="file" accept="image/*" onchange="previewProfilePic(event)" title="Alterar foto"/>
+    </div>
+
+    <div class="profile-details">
+      <div class="profile-username-row">
+        <h1 class="editable" id="profileUsername">seuusuario</h1>
+        <button class="edit-btn" id="editBtn">Editar Perfil</button>
+        <button class="reset-btn" id="resetImgBtn">Redefinir Imagem</button>
+        <button class="reset-btn" id="resetProfileBtn">Redefinir Perfil</button>
+      </div>
+      <ul class="stats-list">
+        <li><span id="postsCount">0</span> publicações</li>
+        <li><span id="followersCount">0</span> seguidores</li>
+        <li><span id="followingCount">0</span> seguindo</li>
+      </ul>
+      <div class="profile-bio">
+        <span class="editable" id="profileName">Seu Nome</span>
+        <p class="editable" id="profileBio">Aqui vai a sua bio – conte um pouco sobre você!</p>
+      </div>
+    </div>
+  </header>
+
+  <script src="../assets/js/perfil.js"></script>
+</body>
+</html>

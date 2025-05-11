@@ -68,7 +68,7 @@ const rememberForgot = document.createElement('div')
 rememberForgot.className = 'remember-forgot'
 
 const forgotPasswordLink = document.createElement('a')
-forgotPasswordLink.href = './pages/redefinirSenha.html'
+forgotPasswordLink.href = './assets/pages/redefinirSenha.html'
 forgotPasswordLink.textContent = 'Esqueceu sua senha?'
 rememberForgot.appendChild(forgotPasswordLink)
 form.appendChild(rememberForgot)
@@ -84,7 +84,7 @@ loginSection.appendChild(form)
 
 // Parágrafo de cadastro
 const registerText = document.createElement('p')
-registerText.innerHTML = 'Não tem uma conta? <a href="/pages/cadastro.html">Cadastre-se</a>'
+registerText.innerHTML = 'Não tem uma conta? <a href="./assets/pages/cadastro.html">Cadastre-se</a>'
 loginSection.appendChild(registerText)
 
 // Mensagem de erro
@@ -123,7 +123,7 @@ form.addEventListener('submit', async (event) => {
         localStorage.setItem('user', JSON.stringify(data.user))
         localStorage.setItem('userId', data.user.id)
 
-        window.location.href = '/pages/home.html'
+        window.location.href = './assets/pages/home.html'
 
     } catch (error) {
         errorMessage.textContent = error.message

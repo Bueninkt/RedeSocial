@@ -90,7 +90,7 @@ cadastroSection.appendChild(errorMessage);
 
 // Cria o link "Já tem um login? Faça login"
 const loginLink = document.createElement('p');
-loginLink.innerHTML = 'Já tem um login? <a href="../../index.html">Faça login</a>';
+loginLink.innerHTML = 'Já tem um login? <a href="./index.html">Faça login</a>';
 cadastroSection.appendChild(loginLink);
 
 // Evento de submit do formulário

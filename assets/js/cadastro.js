@@ -90,7 +90,7 @@ cadastroSection.appendChild(errorMessage);
 
 // Cria o link "Já tem um login? Faça login"
 const loginLink = document.createElement('p');
-loginLink.innerHTML = 'Já tem um login? <a href="https://bueninkt.github.io/Clubefy/index.html">Faça login</a>';
+loginLink.innerHTML = 'Já tem um login? <a href="../../index.html">Faça login</a>';
 cadastroSection.appendChild(loginLink);
 
 // Evento de submit do formulário
@@ -130,7 +130,7 @@ form.addEventListener('submit', async (event) => {
         localStorage.setItem('user', JSON.stringify(data.user)); // Aqui você salva os dados do usuário
 
         // Redireciona para a tela de login
-        window.location.href = 'https://bueninkt.github.io/Clubefy/index.html';
+        window.location.href = '../../index.html';
     } catch (error) {
         errorMessage.textContent = error.message;
         errorMessage.style.display = 'block';
